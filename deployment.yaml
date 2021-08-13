@@ -36,6 +36,6 @@ spec:
     spec:
       containers:
       - name: webapp-demo
-        image: alexanderh12/circleci:0.1.98
+        image: alexanderh12/circleci:0.1.110
         ports:
         - containerPort: 80
