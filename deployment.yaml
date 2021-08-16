@@ -25,7 +25,7 @@ metadata:
   labels:
     app: Flux-webapp-development
 spec:
-  replicas: 6
+  replicas: 2
   selector:
     matchLabels:
       app: Flux-webapp-development
