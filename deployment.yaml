@@ -1,16 +1,16 @@
 apiVersion: v1
 kind: Namespace
 metadata: 
-  name: webapp-development
+  name: Flux-webapp-development
 ---
 kind: Service
 apiVersion: v1
 metadata:
-  name: webapp-development
-  namespace: webapp-development
+  name: Flux-webapp-development
+  namespace: Flux-webapp-development
 spec:
   selector:
-    app: webapp-development
+    app: Flux-webapp-development
   ports:
   - protocol: TCP
     port: 80
@@ -20,22 +20,22 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webapp-development-deployment
-  namespace: webapp-development
+  name: Flux-webapp-development-deployment
+  namespace: Flux-webapp-development
   labels:
-    app: webapp-development
+    app: Flux-webapp-development
 spec:
   replicas: 6
   selector:
     matchLabels:
-      app: webapp-development
+      app: Flux-webapp-development
   template:
     metadata:
       labels:
-        app: webapp-development
+        app: Flux-webapp-development
     spec:
       containers:
-      - name: webapp-development
+      - name: Flux-webapp-development
         image: alexanderh12/circleci:0.1.114
         ports:
         - containerPort: 80
